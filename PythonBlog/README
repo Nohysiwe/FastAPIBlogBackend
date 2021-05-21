@@ -1,0 +1,22 @@
+
+1. 返回类型问题, 首先Result是一个结果的泛型, 所以我们需要使用pydantic的 pydantic.generics.GenericModel 与 typing.Generic typing.TypeVar
+
+
+"""
+    技术栈:
+        python3.7
+        gunicorn            # 应用服务器
+        uvicorn             # web服务器
+        FastAPI             # web框架[底层使用startlette框架]
+        aioredis            # 连接redis
+        asyncpg             # 使用asyncpg作为SQLAlchemy的驱动
+        SQLAlchemy >= 1.4   # 改用自己实现FastAPI连接池插件
+        aiohttp             # 连接 ElasticSearch
+        httpx               # 可以用于替换aiohttp更轻量的异步http请求框架
+        pydanitc            # 数据模型 FastAPI依赖
+        
+        sqlacodegen==2.3.0  # 将数据库表转为ORM模型
+        alembic==1.5.8      # 数据库迁移工具(配套SQLAlchemy)
+"""
+
+
